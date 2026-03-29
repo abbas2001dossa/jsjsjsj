@@ -323,47 +323,43 @@ export default function Page() {
           <>
             <img
               ref={gifRef}
-              className="h-[230px] rounded-lg"
+              className="h-[230px] rounded-3xl border-4 border-pink-200 shadow-xl bg-yellow-50 p-2"
               src={YesGifs[currentGifIndex]}
               alt="Yes Response"
             />
-            {/* <div className="text-4xl md:text-6xl font-bold my-2" style={{ fontFamily: "Charm, serif", fontWeight: "700", fontStyle: "normal" }}>I Love You !!!</div> */}
-            {/* <div  className="text-4xl md:text-4xl font-bold my-1" style={{ fontFamily: "Beau Rivage, serif", fontWeight: "500", fontStyle: "normal" }}> You’re the love of my life. </div>  */}
+            <div className="text-3xl md:text-5xl font-bold my-2 text-pink-500 flex items-center gap-2" style={{ fontFamily: 'Charm, serif', fontWeight: 700 }}>
+              Movie night buddies! 🍕🎬🧸
+            </div>
             <WordMareque />
           </>
         ) : (
           <>
-            {/* <img
-              src={lovesvg}
-              className="fixed animate-pulse top-10 md:left-15 left-6 md:w-40 w-28"
-              alt="Love SVG"
-            /> */}
             <img
               ref={gifRef}
-              className="h-[230px] rounded-lg"
+              className="h-[230px] rounded-3xl border-4 border-pink-200 shadow-xl bg-yellow-50 p-2"
               src={Lovegif}
-              alt="Love Animation"
+              alt="Cute Movie Night Animation"
             />
-            <h1 className="text-4xl md:text-6xl my-4 text-center">
-              Should we go out for dinner sometime?
+            <h1 className="text-4xl md:text-6xl my-4 text-center text-pink-600 font-charm">
+              🍿✨ Would you join me for a cozy movie night? ✨🎬
             </h1>
-            <div className="flex flex-wrap justify-center gap-2 items-center">
+            <div className="flex flex-wrap justify-center gap-4 items-center mt-2">
               <button
                 onMouseEnter={handleMouseEnterYes}
                 onMouseLeave={handleMouseLeave}
-                className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg mr-4`}
+                className={`bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-2xl shadow-lg mr-4 border-2 border-pink-200 transition-all duration-300 scale-105 hover:scale-110`}
                 style={{ fontSize: yesButtonSize }}
                 onClick={handleYesClick}
               >
-                Yes
+                Yes! 🎥🍕
               </button>
               <button
                 onMouseEnter={handleMouseEnterNo}
                 onMouseLeave={handleMouseLeave}
                 onClick={handleNoClick}
-                className="bg-rose-500 hover:bg-rose-600 rounded-lg text-white font-bold py-2 px-4"
+                className="bg-yellow-300 hover:bg-yellow-400 rounded-2xl text-rose-700 font-bold py-3 px-6 border-2 border-yellow-200 shadow-lg transition-all duration-300 scale-105 hover:scale-110"
               >
-                {noCount === 0 ? "No" : getNoButtonText()}
+                {noCount === 0 ? "No" : getNoButtonText()} 🍿
               </button>
             </div>
             {floatingGifs.map((gif) => (
